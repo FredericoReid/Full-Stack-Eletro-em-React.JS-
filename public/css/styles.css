@@ -1,0 +1,162 @@
+/* Gerais */
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.row{
+    margin: 0;
+}
+
+.container{
+    padding: 70px 0;
+}
+
+p, li{
+    color: #444;
+    font-size: 14px;
+}
+
+
+/* Barra de Navegação */
+
+header, .navbar{
+    background-color: #000000;
+}
+
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo{
+    width: 75px;
+}
+
+.navbar-brand{
+    padding: 0;
+    color: #fff;
+}
+
+.navbar-brand:hover{
+    color: #fff;
+}
+
+#navbar-links a{
+    color: #fff;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+}
+
+/* Submenus */
+
+.navbar-nav ul li{
+	background-color: rgb(0, 0, 0);/*
+	float: left;*/
+	width: 135px;
+	height: 40px;
+	display: inline-block; 
+	text-align: center;
+	line-height: 30px;
+	font-size: 16px;
+    position: relative;
+}
+
+.navbar-nav ul li:hover{
+	background-color: rgb(0, 0, 0);
+}
+
+.navbar-nav ul{
+	padding: 0px;
+}
+
+.navbar-nav ul ul{
+	display: none;
+}
+
+.navbar-nav ul li:hover > ul{
+	display:block;
+}
+
+.navbar-nav ul ul ul{
+	margin-left: 139px;
+	top: 0px;
+	position: absolute;
+}
+
+.navbar-nav ul ul li:hover{
+	background-color: #000000;
+}
+
+
+.navbar-nav ul ul ul li:hover{
+	background-color: #000000;
+}
+
+.navbar-nav a{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	font-style: initial;
+}
+
+.navbar-nav ul ul ul li{
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	font-style: initial;
+}
+
+
+/* Estilização dos produtos */
+
+/*
+.cat_produtos {
+    margin-left: 2%;
+}
+
+
+.produtos {
+	width: 15%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 40px;
+    cursor: zoom-in;
+}
+*/
+
+
+.preco_ant {
+    text-decoration: line-through;
+	font-size: 15px;
+	color: black;
+}
+
+.preco_final {
+    color: rgb(233, 18, 18);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.input-class {
+	padding: 0cm;
+	text-transform: uppercase;
+	width: 70px;
+	border: 1px solid #6db5f1;
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+	margin: 10px auto;
+	display: block;
+}
+*/
+
+
+
+
+
+
+
+
+
