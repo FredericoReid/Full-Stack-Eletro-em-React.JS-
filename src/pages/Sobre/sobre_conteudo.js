@@ -10,7 +10,7 @@ function Sobre_conteudo() {
             <div className="container-fluid" id="container-sobre">
                 <div className="row">
                     <div className="col-sm-6">
-                        <img src="imagens/Imagem na pagina SOBRE.png" class="img-fluid" alt="Responsive image" />
+                        <img src="imagens/Imagem na pagina SOBRE.png" class="img-fluid" alt="Responsive" />
                     </div>
 
                     <div className="col-sm-6">
