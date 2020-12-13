@@ -26,7 +26,7 @@ function Cabecalho() {
                             <h5 className="nav-item nav-link" id="conta-menu"> Entre/Cadastre-se </h5>
                             <ul>
                                 <li><h5 className="nav-item nav-link" id="produtos-menu"> Produtos </h5>
-                                    <ul>
+                                    <ul className="list-group">
                                         <li>Celulares</li>
                                         <li>Eletrodomesticos
                                             <ul>
@@ -45,10 +45,8 @@ function Cabecalho() {
                                 </li>
                             </ul>  
 
-                            
                             <div id="botao-sobre"><Link className="nav-item nav-link" id="sobre-menu" to="/sobre">Sobre</Link></div>
-                            <h5 className="nav-item nav-link" id="unidades-menu"> Unidades </h5>
-                            <Link className="nav-item nav-link" id="pedidos-menu" to="/pedidos">Peça!</Link>
+                            <div id="botao-peca"><Link className="nav-item nav-link" id="pedidos-menu" to="/pedidos">Peça!</Link></div>
                             
                             {/* <Route exact path="/" component={Main}/>
                             <Route path="/sobre" component={Sobre}/>
