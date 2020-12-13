@@ -5,7 +5,7 @@ const Pedidos = () => {
     const [pedidos, setPedidos] = useState([]);
 
     useEffect(async() => {
-        const result = await fetch("http://localhost:8080/React6/fse/src/php/pedidosapi.php");
+        const result = await fetch("http://localhost:8080/Full Stack Eletro React.JS - Ultima Versão/src/php/pedidosapi.php");
         setPedidos(await result.json())
     }, [])
 
