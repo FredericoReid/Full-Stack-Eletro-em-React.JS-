@@ -8,7 +8,7 @@ function Pedidos() {
             <div className="row" >
                 <div className="col-12" >
                     
-                    <form className="col-lg-12" action='http://localhost:8080/React6/fse/src/php/processamento_pedidos.php' method="POST" >
+                    <form className="col-lg-12" action='http://localhost:8080/Full Stack Eletro React.JS - Ultima Versão/src/php/processamento_pedidos.php' method="POST" >
 
                         <div className="col-12">
                             <input className="form-control" type="nome_cliente" id="nome" name="nome_cliente" placeholder="Nome completo" required />
@@ -35,21 +35,21 @@ function Pedidos() {
                         <br />
 
                         <div className = "col-12 opcoes_produtos">
-                        <label for="">Selecione seu Produto:</label>
-                        <select className="form-control" name = "produto">
-                            <option value="FOGAO 4 BOCAS">Fogão 4 bocas</option>
-                            <option value="FOGAO ATLAS">Fogão ATLAS</option>
-                            <option value="MICROONDAS ELETROLUX">Microondas Eletrolux</option>
-                            <option value="MICROONDAS PHILCO">Microondas Philco</option>
-                            <option value="MICOONDAS CONSUL">Microondas Consul</option>
-                            <option value="GELADEIRA BRASTEMP">Geladeira Brastemp</option>
-                            <option value="GELADEIRA TRÊS PORTAS">Geladeira três portas</option>
-                            <option value="GELADEIRA DODGE">Geladeira Dodge</option>
-                            <option value="MAQUINA DE LAVAR ELECTROLUX">Maquina de Lavar Eletrolux</option>
-                            <option value="MAQUINA DE LAVAR PHILCO">Maquina de Lavar Philco</option>
-                            <option value="LAVADORA DE PRATOS TORPENTE">Lavadora de Pratos Torpente</option>
-                            <option value="LAVADORA DE PRATOS ELECTROLUX">Lavadora de Pratos Electrolux</option>
-                        </select>
+                            <label for="">Selecione seu Produto:</label>
+                            <select className="form-control" name = "produto">
+                                <option value="FOGAO 4 BOCAS">Fogão 4 bocas</option>
+                                <option value="FOGAO ATLAS">Fogão ATLAS</option>
+                                <option value="MICROONDAS ELETROLUX">Microondas Eletrolux</option>
+                                <option value="MICROONDAS PHILCO">Microondas Philco</option>
+                                <option value="MICOONDAS CONSUL">Microondas Consul</option>
+                                <option value="GELADEIRA BRASTEMP">Geladeira Brastemp</option>
+                                <option value="GELADEIRA TRÊS PORTAS">Geladeira três portas</option>
+                                <option value="GELADEIRA DODGE">Geladeira Dodge</option>
+                                <option value="MAQUINA DE LAVAR ELECTROLUX">Maquina de Lavar Eletrolux</option>
+                                <option value="MAQUINA DE LAVAR PHILCO">Maquina de Lavar Philco</option>
+                                <option value="LAVADORA DE PRATOS TORPENTE">Lavadora de Pratos Torpente</option>
+                                <option value="LAVADORA DE PRATOS ELECTROLUX">Lavadora de Pratos Electrolux</option>
+                            </select>
                         </div>
                         
 
