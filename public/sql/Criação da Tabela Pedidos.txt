@@ -1,0 +1,38 @@
+use fseletro;
+
+create table pedidos(
+	id int auto_increment,
+	nome_cliente varchar(100),
+	endereco varchar(500),
+	email varchar(200),
+	telefone varchar(80),
+	nome_produto varchar(300),
+	valor_unitario float,
+    	quantidade INT,
+    	valor_total float,
+	primary key(id)
+);
+
+insert into pedidos (nome_cliente, endereco, telefone, nome_produto, valor_unitario, quantidade, valor_total)
+values ("Marcos Rocha", "Ruas das Palmeiras, 718 - Vila Santa Clementina", "99999-9999", "Geladeira Três Portas", 1500.00, 2, 3000.00);
+
+insert into pedidos (nome_cliente, endereco, telefone, nome_produto, valor_unitario, quantidade, valor_total)
+values ("Fernanda Silva", "Rua Rua Deolinda de Almeida Corrêa , 13 - Distrito Industrial Nova Avaré", "99999-9999", "Fogão ATLAS", 599.90, 1, 599.90);
+
+insert into pedidos (nome_cliente, endereco, telefone, nome_produto, valor_unitario, quantidade, valor_total)
+values ("Paulo Santos", "Rua Adutora, 590 - Chácara São Domingos Shop", "99999-9999", "Geladeira Dodge", 1500.00, 2, 3000.00);
+
+insert into pedidos (nome_cliente, endereco, telefone, nome_produto, valor_unitario, quantidade, valor_total)
+values ("Sara Carolina", "Rua Silvio de Campos Gurgel, 395 - Residencial Ouro Verde", "99999-9999", "Geladeira Brastemp", 899.90, 1, 899.90);
+
+insert into pedidos (nome_cliente, endereco, telefone, nome_produto, valor_unitario, quantidade, valor_total)
+values ("Simone Martins", "Alameda dos Beija-Flor, 349 - Recanto Campo Belo", "99999-9999", "Lavadora de Pratos Elec.", 599.90, 3, 1799.70);
+
+insert into pedidos (nome_cliente, endereco, telefone, nome_produto, valor_unitario, quantidade, valor_total)
+values ("Raul Vitor", "Rua Anhanguera, 952 - Jardim do Prado", "99999-9999", "Máquina de Lavar", 899.90, 5, 4499.50);
+
+insert into pedidos (nome_cliente, endereco, telefone, nome_produto, valor_unitario, quantidade, valor_total)
+values ("Mirella Clara", "Rua Augusto Avelino de Morais, 752 - Parque das Cerejeiras", "99999-9999", "Microondas Philco", 490.00, 2, 980.00);
+
+insert into pedidos (nome_cliente, endereco, telefone, nome_produto, valor_unitario, quantidade, valor_total)
+values ("Bryan Filipe", "Rua Luiz Borges, 604 - Jardim Veneto II", "99999-9999", "Geladeira Dodge", 999.90, 1, 999.90);

@@ -11,7 +11,7 @@ create table produtos(
 );
 
 insert into produtos (categoria, imagem, descricao, preco, preco_venda)
-values ("geladeira", "./public/imagens/Geladeira Brastemp.jpeg", "Geladeira Brastemp", 899.00, 899.00);
+values ("geladeira", "./imagens/Geladeira Brastemp.jpeg", "Geladeira Brastemp", 899.00, 899.00);
 
 insert into produtos (categoria, imagem, descricao, preco, preco_venda)
 values ("geladeira", "./imagens/Geladeira tres portas.jpeg", "Geladeira tres portas", 1500.00, 1500.00);

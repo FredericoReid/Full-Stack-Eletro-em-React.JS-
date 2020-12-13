@@ -1,0 +1,43 @@
+use fseletro;
+
+create table quantidade(
+	id int auto_increment,
+	foreign key (id) references produtos(id),
+	quantidade int
+);
+
+insert into quantidade (quantidade)
+values (5000);
+
+insert into quantidade (quantidade)
+values (1080);
+
+insert into quantidade (quantidade)
+values (3459);
+
+insert into quantidade (quantidade)
+values (3000);
+
+insert into quantidade (quantidade)
+values (500);
+
+insert into quantidade (quantidade)
+values (5308);
+
+insert into quantidade (quantidade)
+values (8040);
+
+insert into quantidade (quantidade)
+values (2020);
+
+insert into quantidade (quantidade)
+values (2000);
+
+insert into quantidade (quantidade)
+values (1030);
+
+insert into quantidade (quantidade)
+values (732);
+
+insert into quantidade (quantidade)
+values (944);
