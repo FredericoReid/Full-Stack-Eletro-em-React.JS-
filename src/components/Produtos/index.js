@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import './styles.css';
 
 
 const Produtos = () => {
@@ -32,19 +33,23 @@ let redimensiona = (event) => {
 
     return (
         <>
-            <div className="container-fluid d-flex justify-content-center">
+            <div className="container-fluid text-center">
                 <div className="row">
                     {   
                         produtos.map(value => {
                             return (
                                 
                                 <div className="col-sm-3">
-                                    <div key={value.id}>
-                                        <img src= {value.imagem} alt="a" width="120" height="120" onMouseOver={destaque}
-                                            onMouseOut={redimensiona}/> 
-                                        <h5>{value.descricao}</h5>
-                                        <h5>R$:{value.preco}</h5>
-                                        <br /> 
+                                    <div className="card bg-light mb-3">
+                                        <div key={value.id}>
+                                            <img src= {value.imagem} alt="a" width="120" height="120" onMouseOver={destaque}
+                                                onMouseOut={redimensiona}/> 
+                                            <h5>{value.descricao}</h5>
+                                            <div className="preco">
+                                                <h5>R$:{value.preco}</h5>
+                                            </div>
+                                            <br /> 
+                                        </div>
                                     </div>
                                 </div>
                             )
