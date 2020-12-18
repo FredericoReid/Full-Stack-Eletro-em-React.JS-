@@ -1,0 +1,21 @@
+.rodape {
+    background-color: #708090;
+}
+
+.container-fluid .imagens img{
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+#formas-pagamento{
+    margin-top: 30px;
+}
+
+#imagem-cartao{
+    position:relative
+}
+
+#imagem-cartao:hover{
+    top:-10px;box-shadow:0 2px 2px #666
+}
