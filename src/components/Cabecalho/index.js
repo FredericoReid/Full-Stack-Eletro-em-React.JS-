@@ -30,11 +30,11 @@ function Cabecalho() {
                                         <li>Celulares</li>
                                         <li>Eletrodomesticos
                                             <ul>
-                                            <li onclick="exibirCateg('fogao')">Fogões</li>
-                                            <li onclick="exibirCateg('microondas')">Microondas</li>
-                                            <li onclick="exibirCateg('geladeira')">Geladeiras</li>
-                                            <li onclick="exibirCateg('lavaroupas')">Máquinas de Lavar</li>
-                                            <li onclick="exibirCateg('lavaloucas')">Lava - louças</li>
+                                                <li onclick="exibirCateg('fogao')">Fogões</li>
+                                                <li onclick="exibirCateg('microondas')">Microondas</li>
+                                                <li onclick="exibirCateg('geladeira')">Geladeiras</li>
+                                                <li onclick="exibirCateg('lavaroupas')">Máquinas de Lavar</li>
+                                                <li onclick="exibirCateg('lavaloucas')">Lava - louças</li>
                                             </ul>
                                         </li>
                                         <li>Vestíveis</li>
