@@ -4,10 +4,9 @@ require_once("./connection.php");
 
 class Content extends Connection {
     public static function getAll() {
-        $conn = Connection::getDb();
+        $conn = Connection::getDb();      
 
         $i = 0;
-        
         $result = $conn->prepare("SELECT * FROM produtos");
 
         $result->execute();
