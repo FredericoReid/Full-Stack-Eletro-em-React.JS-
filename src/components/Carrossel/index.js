@@ -34,6 +34,8 @@ const Carrossel = () => {
 
                     </div>
             </div>
+            <br />
+            <br />
         </>
     )
 }
