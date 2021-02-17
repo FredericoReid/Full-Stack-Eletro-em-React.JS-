@@ -8,7 +8,7 @@ function Pedidos() {
             <div className="row" >
                 <div className="col-12" >
                     
-                    <form className="col-lg-12" action='http://localhost:8080/Full Stack Eletro React.JS - Ultima Versão/src/php/processamento_pedidos.php' method="POST" >
+                    <form className="col-lg-12" action='http://localhost:3005/processamento_pedidos' method="POST" >
 
                         <div className="col-12">
                             <input className="form-control" type="nome_cliente" id="nome" name="nome_cliente" placeholder="Nome completo" required />
