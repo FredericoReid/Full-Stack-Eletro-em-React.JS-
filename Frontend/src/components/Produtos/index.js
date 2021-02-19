@@ -6,9 +6,11 @@ const Produtos = () => {
     const [produtos, setProdutos] = useState([]);
 
     useEffect(async() => {
-        const result = await fetch("http://localhost:8080/Full Stack Eletro React.JS - Ultima Versão/src/php/produtosapi.php");
+        const result = await fetch("http://localhost:5333/produtos");
         setProdutos(await result.json())
     }, [])
+
+    console.log(produtos)
 
 let destaque = (event) => {
     if (event.target.style.width === "260px") {
@@ -39,9 +41,9 @@ let redimensiona = (event) => {
                         produtos.map(value => {
                             return (
                                 
-                                <div className="col-sm-3">
+                                <div key={value.id} className="col-sm-3">
                                     <div className="card bg-light mb-3">
-                                        <div key={value.id}>
+                                        <div >
                                             <img src= {value.imagem} alt="a" width="120" height="120" onMouseOver={destaque}
                                                 onMouseOut={redimensiona}/> 
                                             <h5>{value.descricao}</h5>

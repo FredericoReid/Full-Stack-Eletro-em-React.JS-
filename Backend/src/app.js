@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
-const conn = require("./conn/conn");
+const mysql = require('mysql');
+const cors = require('cors');
+// const conn = require("./conn/conn");
 // // const handlebars = require("express-handlebars");
 const bodyParser = require('body-parser');
 const Pedidos = require('./models/Pedidos.js/Pedidos.js');
@@ -14,6 +16,14 @@ const Pedidos = require('./models/Pedidos.js/Pedidos.js');
 //Body Parser
 app.use(bodyParser.urlencoded({extended: false}))
 // app.use(bodyParser.json)
+app.use(cors())
+
+const conn = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "fseletro"
+})
 
 //Rotas
 app.post("/processamento_pedidos", function(req, res){
@@ -33,4 +43,46 @@ app.post("/processamento_pedidos", function(req, res){
     })
 });
 
+app.get('/produtos', (req, res) => {
+    const sql = "SELECT * FROM produtos"
+    conn.query(sql, (error, result) => {
+        if (error) {
+            res.json({
+                "message": "Erro na conexão com o banco de dados!"
+            })
+        } else {
+            res.status(201).json(result)
+        }
+    })
+})
+
+app.get('/pedidos', (req, res) => {
+    const sql = "SELECT * FROM pedidos"
+    conn.query(sql, (error, result) => {
+        if (error) {
+            res.json({
+                "message": "Erro na conexão com o banco de dados!"
+            })
+        } else {
+            res.status(201).json(result)
+        }
+    })
+})
+
+app.get('/quantidade_produtos', (req, res) => {
+    const sql = "SELECT produtos.descricao, quantidade.quantidade FROM produtos INNER JOIN quantidade ON produtos.id=quantidade.id"
+    conn.query(sql, (error, result) => {
+        if (error) {
+            res.json({
+                "message": "Erro na conexão com o banco de dados!"
+            })
+        } else {
+            res.status(201).json(result)
+        }
+    })
+})
+
+
 app.listen(5333);
+
+

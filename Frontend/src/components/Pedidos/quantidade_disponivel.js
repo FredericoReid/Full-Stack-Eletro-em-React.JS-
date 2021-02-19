@@ -5,7 +5,7 @@ const Quantidade = () => {
     const [quantidade, setQuantidade] = useState([]);
 
     useEffect(async() => {
-        const result = await fetch("http://localhost:8080/Full Stack Eletro React.Js - Ultima Versão/src/php/quantidade_produtosapi.php");
+        const result = await fetch("http://localhost:5333/quantidade_produtos");
         setQuantidade(await result.json())
     }, [])
 
