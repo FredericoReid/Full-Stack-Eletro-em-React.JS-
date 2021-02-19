@@ -1,4 +1,4 @@
-const conn = require('../../conn/conn.js');
+const db = require('../../conn/conn.js');
 
 const Pedidos = db.sequelize.define('pedidos', {
     nome_cliente: {
@@ -31,7 +31,8 @@ const Pedidos = db.sequelize.define('pedidos', {
 
     valor_total: {
         type: db.Sequelize.DOUBLE
-    },
+    }, 
+
 })
 
 module.exports = Pedidos;
