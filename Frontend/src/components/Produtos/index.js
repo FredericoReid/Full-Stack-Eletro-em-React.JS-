@@ -12,6 +12,7 @@ const Produtos = () => {
 
     console.log(produtos)
 
+
 let destaque = (event) => {
     if (event.target.style.width === "260px") {
         event.target.style.width = "120px";
@@ -37,7 +38,7 @@ let redimensiona = (event) => {
         <>
             <div className="container-fluid text-center">
                 <div className="row">
-                    {   
+                    { 
                         produtos.map(value => {
                             return (
                                 
@@ -55,7 +56,7 @@ let redimensiona = (event) => {
                                     </div>
                                 </div>
                             )
-                        })     
+                        }) 
                     }
                 </div>
             </div>

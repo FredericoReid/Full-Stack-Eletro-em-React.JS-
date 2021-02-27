@@ -2,10 +2,13 @@ const express = require("express");
 const app = express();
 const mysql = require('mysql');
 const cors = require('cors');
-// const conn = require("./conn/conn");
 // // const handlebars = require("express-handlebars");
 const bodyParser = require('body-parser');
-const Pedidos = require('./models/Pedidos.js/Pedidos.js');
+const pedidos = require('./models/Pedidos/Pedidos.js');
+const mongoose = require('mongoose');
+const { json } = require("body-parser");
+const { response } = require("express");
+
 
 
 // //Config
@@ -18,6 +21,13 @@ app.use(bodyParser.urlencoded({extended: false}))
 // app.use(bodyParser.json)
 app.use(cors())
 
+// const conn = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: "",
+//     database: "fseletro"
+// })
+
 const conn = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -26,8 +36,9 @@ const conn = mysql.createConnection({
 })
 
 //Rotas
+const novo_Pedido = mongoose.model('pedidos');
 app.post("/processamento_pedidos", function(req, res){
-    Pedidos.create({
+    new novo_Pedido({
         nome_cliente: req.body.nome_cliente,
         endereco: req.body.endereco,
         email: req.body.email, 
@@ -36,7 +47,7 @@ app.post("/processamento_pedidos", function(req, res){
         valor_unitario: req.body.valor_unitario,
         quantidade: req.body.quantidade,
         valor_total: req.body.valor_total
-    }).then(function(){
+    }).save().then(function(){
         res.redirect('http://localhost:3000/pedidos')
     }).catch(function(erro){
         res.send("Pedido não cadastrado     " + erro)
@@ -56,17 +67,13 @@ app.get('/produtos', (req, res) => {
     })
 })
 
-app.get('/pedidos', (req, res) => {
-    const sql = "SELECT * FROM pedidos"
-    conn.query(sql, (error, result) => {
-        if (error) {
-            res.json({
-                "message": "Erro na conexão com o banco de dados!"
-            })
-        } else {
-            res.status(201).json(result)
-        }
-    })
+app.get('/pedidos', async (req, res) => {
+    try {
+        const result = await pedidos.find()
+        return res.json(result)
+    } catch (err) {
+        return res.status(400).send({ error: 'Erro na listagem dos comentários!      ' + err })
+    }
 })
 
 app.get('/quantidade_produtos', (req, res) => {
