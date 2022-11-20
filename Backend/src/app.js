@@ -31,7 +31,7 @@ app.use(cors())
 const conn = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "",
+    password: "root",
     database: "fseletro"
 })
 
@@ -59,7 +59,7 @@ app.get('/produtos', (req, res) => {
     conn.query(sql, (error, result) => {
         if (error) {
             res.json({
-                "message": "Erro na conexão com o banco de dados!"
+                "message": "Erro na conexão com o banco de dados!" + error
             })
         } else {
             res.status(201).json(result)

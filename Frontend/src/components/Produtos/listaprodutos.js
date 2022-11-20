@@ -5,7 +5,8 @@ const ProductList = () => {
 const [prods, setProds] = useState([]);
 
 useEffect (async() => { 
-    const res =  await fetch("http://localhost:3000/React3/fse/src/php/conexaoprodutos.php");
+    // const res =  await fetch("http://localhost:3000/React3/fse/src/php/conexaoprodutos.php");
+    const res =  await fetch("http://localhost:5333/produtos");
     setProds(await res.json());
     
 }, []);
